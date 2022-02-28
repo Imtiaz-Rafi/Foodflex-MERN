@@ -1,17 +1,17 @@
-/*
-
-Eatery Cafe Template 
-
-http://www.templatemo.com/tm-515-eatery
-
-*/
-
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 body {
     background: #ffffff;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+}
+/*---------------------------------------
+     USER CUSTOM CSS              
+  -----------------------------------------*/
+.user_link a,
+.cart_link a {
+    font-size: 18px !important;
+    color: #ffffff;
 }
 
 /*---------------------------------------
@@ -123,6 +123,7 @@ section {
 
 #team,
 #menu,
+#order,
 #testimonial {
     text-align: center;
 }
@@ -203,6 +204,81 @@ section {
     to {
         transform: rotate(360deg);
     }
+}
+/*---------------------------------------
+     OFFER              
+  -----------------------------------------*/
+#offer .col-md-4 {
+    margin: 0;
+    padding: 0;
+}
+#offer .offer-thumb {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 102%;
+}
+
+.offer-thumb .offer-info {
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: left;
+    padding: 25px 30px;
+    transition: 0.5s 0.2s;
+}
+
+.offer-info .offer-item {
+    float: left;
+}
+
+.offer-info .offer-price {
+    float: right;
+}
+
+.offer-info .offer-price span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    display: block;
+    margin-top: 10px;
+}
+
+.offer-thumb .offer-info h3,
+.offer-thumb .offer-info p,
+.offer-thumb .offer-info span {
+    transform: translateY(100%);
+    opacity: 0;
+    display: block;
+    transition: 0.5s 0.2s;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+
+.offer-thumb .offer-info h3 {
+    margin-top: 0;
+}
+
+.offer-thumb .offer-info p {
+    color: #d9d9d9;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.offer-thumb:hover .offer-info h3,
+.offer-thumb:hover .offer-info p,
+.offer-thumb:hover .offer-info span {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.offer-thumb:hover .offer-info {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /*---------------------------------------
@@ -390,7 +466,7 @@ section {
     background-color: rgba(20, 20, 20, 0.2);
     height: 100%;
     color: #fff;
-    cursor: e-resize;
+    /* cursor: e-resize; */
     padding: 4em 0 0 2em;
 }
 
@@ -939,7 +1015,7 @@ footer .social-icon {
     }
 
     .custom-navbar .navbar-nav.navbar-right li {
-        display: inline-block;
+        /* display: inline-block; */
     }
 
     .custom-navbar .navbar-nav.navbar-right .section-btn {

@@ -4,7 +4,8 @@ import Home from "./home";
 import About from "./about";
 import Team from "./team";
 import Menu from "./menu";
-import Testimonial from "./testimonial";
+// import Testimonial from "./testimonial";
+import Offers from "./offers";
 import Contact from "./contact";
 import Footer from "./footer";
 // import "./css/templatemo-style.css";
@@ -15,10 +16,11 @@ class App extends React.Component {
             <>
                 <Navbar />
                 <Home />
+                <Offers />
                 <About />
                 <Team />
                 <Menu />
-                <Testimonial />
+                {/* <Testimonial /> */}
                 <Contact />
                 <Footer />
             </>

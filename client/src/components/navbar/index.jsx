@@ -12,7 +12,7 @@ const Navbar = () => {
                     </button>
                     {/* lOGO TEXT HERE */}
                     <a href="index.html" className="navbar-brand">
-                        Eatery <span>.</span> Cafe
+                        FoodFlex
                     </a>
                 </div>
                 {/* MENU LINKS */}
@@ -43,6 +43,24 @@ const Navbar = () => {
                                 Contact
                             </a>
                         </li>
+                    </ul>
+
+                    <ul className="nav navbar-nav navbar-right">
+                        <li className="cart_link">
+                            <a href="#" className="smoothScroll">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <li className="user_link">
+                            <a href="#" className="smoothScroll">
+                                <i class="fa fa-user-circle"></i>
+                            </a>
+                        </li>
+                        {/* <li>
+                            <a href="#">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li> */}
                     </ul>
                     <ul className="nav navbar-nav navbar-right">
                         <li>

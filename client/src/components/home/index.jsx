@@ -9,8 +9,8 @@ const Home = () => {
                         <div className="caption">
                             <div className="container">
                                 <div className="col-md-8 col-sm-12">
-                                    <h3>Eatery Cafe &amp; Restaurant</h3>
-                                    <h1>Our mission is to provide an unforgettable experience</h1>
+                                    <h3>Foodflex</h3>
+                                    <h1>Beyond the boundaries of taste.</h1>
                                     <a href="#menu" className="section-btn btn btn-default smoothScroll">
                                         Discover menu
                                     </a>

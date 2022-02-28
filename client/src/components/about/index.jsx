@@ -9,22 +9,17 @@ const About = () => {
                         <div className="about-info">
                             <div className="section-title wow fadeInUp" data-wow-delay="0.2s">
                                 <h4>Read our story</h4>
-                                <h2>We've been Making The Delicious Foods Since 1999</h2>
+                                <h2>We've been Making The Delicious Foods Since 2021</h2>
                             </div>
                             <div className="wow fadeInUp" data-wow-delay="0.4s">
                                 <p>
-                                    Fusce hendrerit malesuada lacinia. Donec semper semper sem vitae malesuada. Proin
-                                    scelerisque risus et ipsum semper molestie sed in nisi. Ut rhoncus congue lectus,
-                                    rhoncus venenatis leo malesuada id.
-                                </p>
-                                <p>
-                                    Sed elementum vel felis sed scelerisque. In arcu diam, sollicitudin eu nibh ac,
-                                    posuere tristique magna. You can use this template for your cafe or restaurant
-                                    website. Please tell your friends about{" "}
-                                    <a href="https://plus.google.com/+templatemo" target="_parent">
-                                        templatemo
-                                    </a>
-                                    . Thank you.
+                                    FoodFlex, An online food ordering system is a system that will allow you order our
+                                    food from the menu section or reserve a table for you and your friends &amp; family.
+                                    <br /> <br />
+                                    Without logging in, users can browse our cuisine menu. Where users may search for
+                                    and order their favorite foods in the quantities they require. Our goal is to
+                                    deliver food to the locations you specify so that you can enjoy our cuisine with
+                                    your friends and family wherever they are.
                                 </p>
                             </div>
                         </div>
