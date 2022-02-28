@@ -123,7 +123,7 @@ section {
 
 #team,
 #menu,
-#order,
+#offer,
 #testimonial {
     text-align: center;
 }
@@ -218,6 +218,13 @@ section {
     cursor: pointer;
     width: 102%;
 }
+.offer-thumb img {
+    width: 100%;
+    transition: 0.5s;
+}
+.offer-thumb:hover img {
+    transform: scale(1.15);
+}
 
 .offer-thumb .offer-info {
     position: absolute;
@@ -237,6 +244,9 @@ section {
 .offer-info .offer-price {
     float: right;
 }
+.offer-info .offer-cart-plus {
+    float: right;
+}
 
 .offer-info .offer-price span {
     font-size: 20px;
@@ -245,10 +255,27 @@ section {
     display: block;
     margin-top: 10px;
 }
+.offer-info .offer-cart-plus a {
+    text-align: center;
+    background: #333333;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #d9d9d9;
+    font-size: 20px;
+    margin: 15px 5px 0 5px;
+}
+.offer-cart-plus a:hover {
+    transition: 0.2s ease-in-out !important;
+    background: #ce3232;
+    color: #ffffff;
+}
 
 .offer-thumb .offer-info h3,
 .offer-thumb .offer-info p,
-.offer-thumb .offer-info span {
+.offer-thumb .offer-info span,
+.offer-thumb .offer-info a {
     transform: translateY(100%);
     opacity: 0;
     display: block;
@@ -269,10 +296,15 @@ section {
     font-weight: bold;
     letter-spacing: 1px;
 }
+.offer-info .d-inline-grid {
+    display: inline-grid;
+    float: right;
+}
 
 .offer-thumb:hover .offer-info h3,
 .offer-thumb:hover .offer-info p,
-.offer-thumb:hover .offer-info span {
+.offer-thumb:hover .offer-info span,
+.offer-thumb:hover .offer-info a {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -703,6 +735,18 @@ section {
 
 .menu-thumb:hover .menu-info {
     background: rgba(0, 0, 0, 0.8);
+}
+#menu .section-btn:hover {
+    background: #292929;
+    color: #ffffff;
+}
+
+#menu .section-btn:focus {
+    color: #ffffff;
+}
+.section-menu-button {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 /*---------------------------------------

@@ -14,11 +14,9 @@ const Footer = () => {
                             </div>
                             <address className="wow fadeInUp" data-wow-delay="0.4s">
                                 <p>
-                                    123 nulla a cursus rhoncus,
+                                    New Market,
                                     <br />
-                                    augue sem viverra 10870
-                                    <br />
-                                    id ultricies sapien
+                                    Chittagong, Bangladesh
                                 </p>
                             </address>
                         </div>
@@ -33,9 +31,9 @@ const Footer = () => {
                             <address className="wow fadeInUp" data-wow-delay="0.4s">
                                 <p>090-080-0650 | 090-070-0430</p>
                                 <p>
-                                    <a href="mailto:info@company.com">info@company.com</a>
+                                    <a href="mailto:foodflex@company.com">foodflex@company.com</a>
                                 </p>
-                                <p>LINE: eatery247</p>
+                                <p>LINE: foodflex247</p>
                             </address>
                         </div>
                     </div>
@@ -47,14 +45,14 @@ const Footer = () => {
                                 </h2>
                             </div>
                             <div className="wow fadeInUp" data-wow-delay="0.4s">
-                                <p>Monday: Closed</p>
+                                <p>Saturday: Closed</p>
                                 <div>
-                                    <strong>Tuesday to Friday</strong>
+                                    <strong>Sunday to Thursday</strong>
                                     <p>7:00 AM - 9:00 PM</p>
                                 </div>
                                 <div>
-                                    <strong>Saturday - Sunday</strong>
-                                    <p>11:00 AM - 10:00 PM</p>
+                                    <strong>Friday</strong>
+                                    <p>11:00 AM - 11:00 PM</p>
                                 </div>
                             </div>
                         </div>
@@ -77,20 +75,12 @@ const Footer = () => {
                         <div className="wow fadeInUp copyright-text" data-wow-delay="0.8s">
                             <p>
                                 <br />
-                                Copyright © 2018 <br />
-                                Your Company Name
+                                Copyright © 2022 <br />
+                                FoodFlex
                                 <br />
                                 <br />
-                                Design:
-                                <a rel="nofollow" href="http://templatemo.com" target="_parent">
-                                    TemplateMo
-                                </a>
-                                <br />
-                                <br />
-                                Distribution:
-                                <a href="http://themewagon.com" target="_parent">
-                                    ThemeWagon
-                                </a>
+                                Developer:
+                                <a href="https://github.com/Imtiaz-Rafi/Foodflex-MERN"> Imtiaz-Rafi</a>
                             </p>
                         </div>
                     </div>

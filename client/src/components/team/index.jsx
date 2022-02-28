@@ -52,7 +52,7 @@ const Team = () => {
                         </div>
                         <div className="team-info">
                             <h3>Lindsay Perlen</h3>
-                            <p>Owner &amp; Manager</p>
+                            <p>Manager</p>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-4">

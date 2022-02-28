@@ -113,6 +113,13 @@ const Menu = () => {
                             </a>
                         </div>
                     </div>
+                    <div className="col-md-12 col-sm-12">
+                        <div className="section-menu-button">
+                            <a href="#footer" className="section-btn">
+                                See Full Menu List
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

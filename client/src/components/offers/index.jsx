@@ -4,18 +4,19 @@ const Offers = () => {
     return (
         // <!-- offer section -->
 
-        <section id="order" data-stellar-background-ratio="0.5">
+        <section id="offer" data-stellar-background-ratio="0.5">
             {/* <div class="offer_container"> */}
             <div class="container">
                 <div class="row">
                     <div className="col-md-12 col-sm-12">
                         <div className="section-title wow fadeInUp" data-wow-delay="0.1s">
-                            <h2>Meet our chefs</h2>
-                            <h4>They are nice &amp; friendly</h4>
+                            <h2>Today's Offers</h2>
+                            {/* <h4>They are nice &amp; friendly</h4> */}
+                            <h4>Grab them ASAP. Time is flying</h4>
                         </div>
                     </div>
                     <div>
-                        <div className="col-md-4 col-sm-4">
+                        <div className="col-md-6 col-sm-4">
                             {/* MENU THUMB */}
                             <div className="offer-thumb">
                                 <a href="#" className="image-popup" title="American Breakfast">
@@ -25,42 +26,35 @@ const Offers = () => {
                                             <h3>American Breakfast</h3>
                                             <p>Tomato / Eggs / Sausage</p>
                                         </div>
-                                        <div className="offer-price">
-                                            <span>$25</span>
+                                        <div className="d-inline-grid">
+                                            <div className="offer-price">
+                                                <span>20% off</span>
+                                            </div>
+                                            <div className="offer-cart-plus">
+                                                <a href="#" class="fa fa-cart-plus" aria-hidden="true" />
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div className="col-md-4 col-sm-4">
+                        <div className="col-md-6 col-sm-4">
                             {/* MENU THUMB */}
                             <div className="offer-thumb">
-                                <a href="#" className="image-popup" title="American Breakfast">
-                                    <img src="images/menu-image1.jpg" className="img-responsive" alt="" />
+                                <a href="#" className="image-popup" title="Deli Burger">
+                                    <img src="images/menu-image5.jpg" className="img-responsive" alt="" />
                                     <div className="offer-info">
                                         <div className="offer-item">
-                                            <h3>American Breakfast</h3>
-                                            <p>Tomato / Eggs / Sausage</p>
+                                            <h3>Deli Burger</h3>
+                                            <p>Beef / Fried Potatoes</p>
                                         </div>
-                                        <div className="offer-price">
-                                            <span>$25</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-sm-4">
-                            {/* MENU THUMB */}
-                            <div className="offer-thumb">
-                                <a href="#" className="image-popup" title="American Breakfast">
-                                    <img src="images/menu-image1.jpg" className="img-responsive" alt="" />
-                                    <div className="offer-info">
-                                        <div className="offer-item">
-                                            <h3>American Breakfast</h3>
-                                            <p>Tomato / Eggs / Sausage</p>
-                                        </div>
-                                        <div className="offer-price">
-                                            <span>$25</span>
+                                        <div className="d-inline-grid">
+                                            <div className="offer-price">
+                                                <span>15% off</span>
+                                            </div>
+                                            <div className="offer-cart-plus">
+                                                <a href="#" class="fa fa-cart-plus" aria-hidden="true" />
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
