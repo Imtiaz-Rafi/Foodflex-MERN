@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
     return (
@@ -19,7 +20,7 @@ const Offers = () => {
                         <div className="col-md-6 col-sm-4">
                             {/* MENU THUMB */}
                             <div className="offer-thumb">
-                                <a href="#" className="image-popup" title="American Breakfast">
+                                <Link to="/menu" className="image-popup" title="American Breakfast">
                                     <img src="images/menu-image1.jpg" className="img-responsive" alt="" />
                                     <div className="offer-info">
                                         <div className="offer-item">
@@ -31,17 +32,17 @@ const Offers = () => {
                                                 <span>20% off</span>
                                             </div>
                                             <div className="offer-cart-plus">
-                                                <a href="#" class="fa fa-cart-plus" aria-hidden="true" />
+                                                <Link to="cart" class="fa fa-cart-plus" aria-hidden="true" />
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-6 col-sm-4">
                             {/* MENU THUMB */}
                             <div className="offer-thumb">
-                                <a href="#" className="image-popup" title="Deli Burger">
+                                <Link to="/menu" className="image-popup" title="Deli Burger">
                                     <img src="images/menu-image5.jpg" className="img-responsive" alt="" />
                                     <div className="offer-info">
                                         <div className="offer-item">
@@ -53,11 +54,11 @@ const Offers = () => {
                                                 <span>15% off</span>
                                             </div>
                                             <div className="offer-cart-plus">
-                                                <a href="#" class="fa fa-cart-plus" aria-hidden="true" />
+                                                <Link to="/menu" class="fa fa-cart-plus" aria-hidden="true" />
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

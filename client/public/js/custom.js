@@ -113,4 +113,4 @@
     new WOW({ mobile: false }).init();
 })(jQuery);
 
-console.log("Ekhane Aschi");
+// console.log("Ekhane Aschi");
