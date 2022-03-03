@@ -8,7 +8,8 @@ import PreLoader from "./Inc/PreLoader";
 // ~~~~~~~ LINKS ~~~~~~~
 import Home from "./Home";
 import Menu from "./Menu";
-import Contact from "./Contact";
+// import Contact from "./Contact";
+import Reservation from "./Reservation";
 
 class App extends React.Component {
     render() {
@@ -19,8 +20,8 @@ class App extends React.Component {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<Menu />} />
-                    <Route path="/contact" element={<Contact />} />
-                    {/* <Route path="/" element={<Home />} /> */}
+                    {/* <Route path="/contact" element={<Contact />} /> */}
+                    <Route path="/reservation" element={<Reservation />} />
 
                     <Route path="*" element={<Error />} />
                 </Routes>

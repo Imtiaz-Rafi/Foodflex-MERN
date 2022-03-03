@@ -9,7 +9,7 @@ const NavCards = () => {
                 </a>
             </li>
             <li>
-                <a href="#footer">
+                <a href="#reservation">
                     <i className="fa fa-phone" /> Reserve a table
                 </a>
             </li>

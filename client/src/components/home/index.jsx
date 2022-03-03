@@ -3,7 +3,8 @@ import Slider from "./sections/Slider";
 import Offers from "./sections/Offers";
 import About from "./sections/About";
 import MenuView from "./sections/MenuView";
-import Contact from "../Contact";
+// import Contact from "../Contact";
+import Reservation from "../Reservation";
 // import Team from "./team";
 // import Testimonial from "./testimonial";
 
@@ -14,7 +15,8 @@ const Home = () => {
             <Offers />
             <About />
             <MenuView />
-            <Contact />
+            {/* <Contact /> */}
+            <Reservation />
         </>
     );
 };
