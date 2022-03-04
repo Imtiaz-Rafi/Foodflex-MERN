@@ -5,7 +5,7 @@ import NavCards from "./controllers/NavCards";
 
 const Navbar = () => {
     return (
-        <section className="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <section className="navbar custom-navbar navbar-fixed-top navbar-home" role="navigation">
             <div className="container">
                 <Logo />
                 {/* MENU LINKS */}

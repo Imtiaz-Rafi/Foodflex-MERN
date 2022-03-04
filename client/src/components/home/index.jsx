@@ -1,4 +1,5 @@
 import React from "react";
+import PreLoader from "../Inc/PreLoader";
 import Slider from "./sections/Slider";
 import Offers from "./sections/Offers";
 import About from "./sections/About";
@@ -11,6 +12,7 @@ import Reservation from "../Reservation";
 const Home = () => {
     return (
         <>
+            {/* <PreLoader /> */}
             <Slider />
             <Offers />
             <About />

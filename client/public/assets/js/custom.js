@@ -3,6 +3,7 @@
 
     // PRE LOADER
     $(window).load(function () {
+        // console.log("Cholce GAARI");
         $(".preloader").fadeOut(1000); // set duration in brackets
     });
 
@@ -12,10 +13,10 @@
     });
 
     $(window).scroll(function () {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        if ($(".navbar").offset().top >= 50) {
+            $(".navbar-home").addClass("top-nav-collapse");
         } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $(".navbar-home").removeClass("top-nav-collapse");
         }
     });
 

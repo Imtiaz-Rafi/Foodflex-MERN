@@ -16,7 +16,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="American Breakfast">
-                                <img src="images/menu-image1.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image1.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>American Breakfast</h3>
@@ -33,7 +33,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="Self-made Salad">
-                                <img src="images/menu-image2.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image2.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>Self-made Salad</h3>
@@ -50,7 +50,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="Chinese Noodle">
-                                <img src="images/menu-image3.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image3.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>Chinese Noodle</h3>
@@ -67,7 +67,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="Rice Soup">
-                                <img src="images/menu-image4.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image4.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>Rice Soup</h3>
@@ -84,7 +84,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="Project title">
-                                <img src="images/menu-image5.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image5.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>Deli Burger</h3>
@@ -101,7 +101,7 @@ const MenuView = () => {
                         {/* MENU THUMB */}
                         <div className="menu-thumb">
                             <Link to="/menu" className="image-popup" title="Project title">
-                                <img src="images/menu-image6.jpg" className="img-responsive" alt="" />
+                                <img src="assets/images/menu-image6.jpg" className="img-responsive" alt="" />
                                 <div className="menu-info">
                                     <div className="menu-item">
                                         <h3>Big Flat Fried</h3>

@@ -26,7 +26,7 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-sm-12">
                         <div className="wow fadeInUp about-image" data-wow-delay="0.6s">
-                            <img src="images/about-image.jpg" className="img-responsive" alt="" />
+                            <img src="assets/images/about-image.jpg" className="img-responsive" alt="" />
                         </div>
                     </div>
                 </div>

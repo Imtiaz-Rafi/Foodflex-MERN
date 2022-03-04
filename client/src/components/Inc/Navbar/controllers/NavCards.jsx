@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavCards = () => {
     return (
@@ -9,9 +10,12 @@ const NavCards = () => {
                 </a>
             </li>
             <li>
-                <a href="#reservation">
+                <Link to="/reservation">
                     <i className="fa fa-phone" /> Reserve a table
-                </a>
+                </Link>
+                {/* <a href="#reservation">
+                    <i className="fa fa-phone" /> Reserve a table
+                </a> */}
             </li>
             {/* WILL USE LATER */}
             {/* <a href="#" className="section-btn">
