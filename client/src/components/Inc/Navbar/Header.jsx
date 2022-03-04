@@ -9,7 +9,8 @@ const Navbar = () => {
             <div className="container">
                 <Logo />
                 {/* MENU LINKS */}
-                <div className="collapse navbar-collapse">
+                {/* <div className="collapse navbar-collapse"> */}
+                <div className="">
                     <NavLinks />
                     <NavCards />
                 </div>
