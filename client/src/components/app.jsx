@@ -11,26 +11,26 @@ import Home from "./Home";
 import Menu from "./Menu";
 // import Contact from "./Contact";
 import Reservation from "./Reservation";
-// import Login from "./Auth/login";
+import Login from "./Auth/login";
 
-// import { Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
 class App extends React.Component {
-    // state = {
-    //     isModalOpen: false,
-    // };
+    state = {
+        isModalOpen: false,
+    };
 
-    // toggleForm = () => {
-    //     console.log("Clicked");
-    //     this.setState({ isModalOpen: !this.state.isModalOpen });
-    // };
+    toggleForm = () => {
+        console.log("Clicked");
+        this.setState({ isModalOpen: !this.state.isModalOpen });
+    };
 
     render() {
         return (
             <>
                 <PreLoader />
                 <Routes>
-                    <Route path="/" element={<Header />} />
+                    <Route path="/" element={<Header toggleForm={this.toggleForm} />} />
                     <Route path="*" element={<Navbar toggleForm={this.toggleForm} />} />
                 </Routes>
 
@@ -43,12 +43,12 @@ class App extends React.Component {
                     <Route path="*" element={<Error />} />
                 </Routes>
 
-                {/* <Modal isOpen={this.state.isModalOpen} toggle={this.toggleForm}>
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleForm}>
                     <ModalHeader>Create New ToDo Task</ModalHeader>
                     <ModalBody>
                         <Login />
                     </ModalBody>
-                </Modal> */}
+                </Modal>
                 <Footer />
             </>
         );

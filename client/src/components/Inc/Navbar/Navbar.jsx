@@ -13,7 +13,7 @@ const Navbar = ({ toggleForm }) => {
                 <Logo />
                 {/* MENU LINKS */}
                 {/* <div className="collapse navbar-collapse"> */}
-                <div className="">
+                <div className="collapse navbar-collapse">
                     {/* <NavLinks /> */}
                     <NavCards toggleForm={toggleForm} />
                 </div>

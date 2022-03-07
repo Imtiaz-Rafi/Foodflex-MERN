@@ -3556,7 +3556,7 @@ input[type="reset"].btn-block,
 input[type="submit"].btn-block {
     width: 100%;
 }
-.fade {
+/* .fade {
     opacity: 0;
     -webkit-transition: opacity 0.15s linear;
     -o-transition: opacity 0.15s linear;
@@ -3564,7 +3564,7 @@ input[type="submit"].btn-block {
 }
 .fade.in {
     opacity: 1;
-}
+} */
 .collapse {
     display: none;
 }
@@ -4446,6 +4446,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
     .navbar-nav {
         float: left;
+        flex-direction: row;
         margin: 0;
     }
     .navbar-nav > li {
@@ -6090,7 +6091,7 @@ button.close {
     background: 0 0;
     border: 0;
 }
-.modal-open {
+/* .modal-open {
     overflow: hidden;
 }
 .modal {
@@ -6212,7 +6213,7 @@ button.close {
     .modal-lg {
         width: 900px;
     }
-}
+} */
 .tooltip {
     position: absolute;
     z-index: 1070;
@@ -6641,7 +6642,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px;

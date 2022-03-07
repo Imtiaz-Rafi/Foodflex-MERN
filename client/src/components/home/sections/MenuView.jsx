@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const MenuView = () => {
     return (
         <section id="menu" data-stellar-background-ratio="0.5">
-            <div className="container">
+            <div className="">
                 <div className="row">
                     <div className="col-md-12 col-sm-12">
                         <div className="section-title wow fadeInUp" data-wow-delay="0.1s">
