@@ -44,7 +44,7 @@ class App extends React.Component {
                 </Routes>
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleForm}>
-                    <ModalHeader>Create New ToDo Task</ModalHeader>
+                    <ModalHeader>Create New Account</ModalHeader>
                     <ModalBody>
                         <Login />
                     </ModalBody>
