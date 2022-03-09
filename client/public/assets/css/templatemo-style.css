@@ -17,6 +17,50 @@ body {
     color: #ffffff;
 }
 
+/* --------------------------------------
+    MODALS
+----------------------------------------*/
+.Modal-Header h5 {
+    /* background: #ce3232; */
+    /* color: #fff; */
+    font-size: 25px;
+}
+.Login-Body {
+    padding: 20px;
+}
+.Login-Body .Loginbtn {
+    /* font-size: 13px; */
+    color: #fff;
+    background-color: #ce3232;
+    padding: 12px 25px;
+    transition: all 0.3s;
+}
+.Login-Body .Loginbtn:hover {
+    background-color: #ad1f1f;
+}
+.forgot-pass {
+    padding: 15px;
+    text-align: right;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.18);
+}
+.forgot-pass a {
+    color: #777;
+}
+.api-Links {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.18);
+}
+.bottom-LoginForm {
+    padding-top: 15px;
+    text-align: center;
+}
+.bottom-LoginForm .btn {
+    background: rgb(0, 0, 0, 0.3);
+    padding: 6px 30px;
+    text-align: center;
+}
 /*---------------------------------------
      TYPOGRAPHY              
   -----------------------------------------*/

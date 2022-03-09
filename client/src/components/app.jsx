@@ -45,17 +45,17 @@ class App extends React.Component {
 
                 <Modal
                     centered
-                    fullscreen=""
-                    scrollable
+                    // fullscreen=""
+                    // scrollable
                     size=""
                     isOpen={this.state.isModalOpen}
                     toggle={this.toggleForm}
                 >
-                    <ModalHeader>Create New Account</ModalHeader>
-                    <ModalBody>
+                    <ModalHeader className="Modal-Header">Sign In to Your Account</ModalHeader>
+                    <ModalBody className="Login-Body">
                         <Login />
                     </ModalBody>
-                    <ModalFooter>Didn't have Account?</ModalFooter>
+                    {/* <ModalFooter>Didn't have Account?</ModalFooter> */}
                 </Modal>
                 <Footer />
             </>

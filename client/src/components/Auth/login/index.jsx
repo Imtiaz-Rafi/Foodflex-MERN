@@ -93,30 +93,15 @@ const Login = () => {
                 </div>
             </div> */}
             <Form>
-                <FormGroup row>
-                    <Label for="email" sm={1}>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </Label>
-                    <Col sm={11}>
-                        <Input id="email" name="email" placeholder="yourmail@abc.com" type="email" />
-                    </Col>
-                    {/* <FormFeedback tooltip valid>
-                        Sweet! that name is available
-                    </FormFeedback>
-                    <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback> */}
+                <FormGroup>
+                    <Label for="email">Email</Label>
+                    <Input id="email" name="email" placeholder="yourmail@abc.com" type="email" />
                 </FormGroup>
-                <FormGroup row className="position-relative">
-                    <Label for="password" sm={1}>
-                        <i class="fa fa-lock"></i>
-                    </Label>
-                    <Col sm={11}>
-                        <Input id="password" name="password" placeholder="Password" type="password" />
-                    </Col>
-                    {/* <FormFeedback tooltip valid>
-                        Sweet! that name is available
-                    </FormFeedback>
-                    <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback> */}
+                <FormGroup>
+                    <Label for="password">Password</Label>
+                    <Input id="password" name="password" placeholder="Enter Your password" type="password" />
                 </FormGroup>
+
                 <FormGroup row>
                     <Col
                         sm={{
@@ -128,12 +113,21 @@ const Login = () => {
                         </FormGroup>
                     </Col>
                 </FormGroup>
-                <Button block color="success">
+                <Button block className="Loginbtn">
                     Sign In
                 </Button>
             </Form>
-            <Link to="#">Forgot Password?</Link>
-            <CardBottom dir="/register" title="Don't have an account? Sign Up" />
+            <div className="forgot-pass">
+                <Link to="#">Forgot Password?</Link>
+            </div>
+            <div className="api-Links">
+                <Button>Facebook</Button>
+                <Button>Google</Button>
+            </div>
+            <div className="bottom-LoginForm" color="light">
+                <Button>Didn't have an account? Sign Up</Button>
+            </div>
+            {/* <CardBottom dir="/register" title="Don't have an account? Sign Up" /> */}
         </>
     );
 };
