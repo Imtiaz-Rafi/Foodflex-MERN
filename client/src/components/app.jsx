@@ -13,7 +13,7 @@ import Menu from "./Menu";
 import Reservation from "./Reservation";
 import Login from "./Auth/login";
 
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 
 class App extends React.Component {
     state = {
@@ -43,11 +43,19 @@ class App extends React.Component {
                     <Route path="*" element={<Error />} />
                 </Routes>
 
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleForm}>
+                <Modal
+                    centered
+                    fullscreen=""
+                    scrollable
+                    size=""
+                    isOpen={this.state.isModalOpen}
+                    toggle={this.toggleForm}
+                >
                     <ModalHeader>Create New Account</ModalHeader>
                     <ModalBody>
                         <Login />
                     </ModalBody>
+                    <ModalFooter>Didn't have Account?</ModalFooter>
                 </Modal>
                 <Footer />
             </>
