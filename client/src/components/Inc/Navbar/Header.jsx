@@ -5,7 +5,7 @@ import NavCards from "./controllers/NavCards";
 
 import PropTypes from "prop-types";
 
-const Header = ({ toggleForm }) => {
+const Header = ({ toggleLoginForm }) => {
     return (
         <section className="navbar custom-navbar navbar-fixed-top navbar-home" role="navigation">
             <div className="container">
@@ -14,14 +14,14 @@ const Header = ({ toggleForm }) => {
                 {/* <div className="collapse navbar-collapse"> */}
                 <div className="collapse navbar-collapse">
                     <NavLinks />
-                    <NavCards toggleForm={toggleForm} />
+                    <NavCards toggleLoginForm={toggleLoginForm} />
                 </div>
             </div>
         </section>
     );
 };
 Header.propTypes = {
-    toggleForm: PropTypes.func.isRequired,
+    toggleLoginForm: PropTypes.func.isRequired,
 };
 
 export default Header;

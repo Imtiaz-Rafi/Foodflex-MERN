@@ -6,16 +6,14 @@ import NavCards from "./controllers/NavCards";
 
 import PropTypes from "prop-types";
 
-const Navbar = ({ toggleForm }) => {
+const Navbar = ({ toggleLoginForm }) => {
     return (
         <section className="navbar custom-navbar navbar-fixed-top top-nav-collapse">
             <div className="container">
                 <Logo />
                 {/* MENU LINKS */}
-                {/* <div className="collapse navbar-collapse"> */}
                 <div className="collapse navbar-collapse">
-                    {/* <NavLinks /> */}
-                    <NavCards toggleForm={toggleForm} />
+                    <NavCards toggleLoginForm={toggleLoginForm} />
                 </div>
             </div>
         </section>
@@ -23,7 +21,7 @@ const Navbar = ({ toggleForm }) => {
 };
 
 Navbar.propTypes = {
-    toggleForm: PropTypes.func.isRequired,
+    toggleLoginForm: PropTypes.func.isRequired,
 };
 
 export default Navbar;

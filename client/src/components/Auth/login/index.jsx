@@ -1,27 +1,38 @@
 import React, { useState } from "react";
 // import "../../css/login.css";
+import PropTypes from "prop-types";
 import LoginForm from "./LoginForm";
 import CardHeader from "../CardHeader";
 import CardBottom from "../CardBottom";
+import SocialLinks from "../SocialLinks";
 import { useNavigate, Link } from "react-router-dom";
 
 import { Form, FormGroup, Input, Label, Button, Row, Col, FormFeedback } from "reactstrap";
+import { Modal, ModalBody } from "reactstrap";
 
 const initValues = {
     email: "",
     pass: "",
 };
 
-const Login = () => {
+const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(initValues);
+    const [remember, setRemember] = useState(false);
     const [error, setError] = useState({});
 
     const handleChange = (event) => {
+        // const { error, isValid } = handleError();
+        // if (!isValid) {
+        //     setError(error);
+        // }
         setUser({
             ...user,
             [event.target.name]: event.target.value,
         });
+    };
+    const handleCheckBox = (event) => {
+        setRemember(event.target.checked);
     };
 
     const handleSubmit = async (event) => {
@@ -85,51 +96,32 @@ const Login = () => {
 
     return (
         <>
-            {/* <div className="container">
-                <div className="card-content login-content">
-                    <CardHeader title="Log in to Your Account" />
-                    <LoginForm values={user} error={error} handleChange={handleChange} handleSubmit={handleSubmit} />
-                    <CardBottom dir="/register" title="Don't have an account? Sign Up" />
-                </div>
-            </div> */}
-            <Form>
-                <FormGroup>
-                    <Label for="email">Email</Label>
-                    <Input id="email" name="email" placeholder="yourmail@abc.com" type="email" />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="password">Password</Label>
-                    <Input id="password" name="password" placeholder="Enter Your password" type="password" />
-                </FormGroup>
-
-                <FormGroup row>
-                    <Col
-                        sm={{
-                            size: 10,
-                        }}
-                    >
-                        <FormGroup check>
-                            <Input id="checkbox2" type="checkbox" /> <Label check>Remember Password</Label>
-                        </FormGroup>
-                    </Col>
-                </FormGroup>
-                <Button block className="Loginbtn">
-                    Sign In
-                </Button>
-            </Form>
-            <div className="forgot-pass">
-                <Link to="#">Forgot Password?</Link>
-            </div>
-            <div className="api-Links">
-                <Button>Facebook</Button>
-                <Button>Google</Button>
-            </div>
-            <div className="bottom-LoginForm" color="light">
-                <Button>Didn't have an account? Sign Up</Button>
-            </div>
-            {/* <CardBottom dir="/register" title="Don't have an account? Sign Up" /> */}
+            <Modal centered size="" isOpen={isLoginModalOpen} toggle={toggleLoginForm}>
+                <CardHeader title="Log in to Your Account" />
+                <ModalBody className="Login-Body">
+                    <LoginForm
+                        values={user}
+                        error={error}
+                        remember={remember}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        handleCheckBox={handleCheckBox}
+                    />
+                    <div className="forgot-pass">
+                        <Link to="#">Forgot Password?</Link>
+                    </div>
+                    <SocialLinks />
+                    <CardBottom title="Don't have an account? Sign Up" />
+                </ModalBody>
+            </Modal>
         </>
     );
+};
+Login.propTypes = {
+    toggleLoginForm: PropTypes.func.isRequired,
+    // toggleSignUpForm: PropTypes.func.isRequired,
+    isLoginModalOpen: PropTypes.bool.isRequired,
+    // isSignUpModalOpen: PropTypes.bool.isRequired,
 };
 
 export default Login;

@@ -11,18 +11,17 @@ import Home from "./Home";
 import Menu from "./Menu";
 // import Contact from "./Contact";
 import Reservation from "./Reservation";
-import Login from "./Auth/login";
-
-import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import Auth from "./Auth";
+// import ModalTest from "./ModalTest";
 
 class App extends React.Component {
     state = {
-        isModalOpen: false,
+        isLoginModalOpen: false,
     };
 
-    toggleForm = () => {
+    toggleLoginForm = () => {
         console.log("Clicked");
-        this.setState({ isModalOpen: !this.state.isModalOpen });
+        this.setState({ isLoginModalOpen: !this.state.isLoginModalOpen });
     };
 
     render() {
@@ -30,8 +29,8 @@ class App extends React.Component {
             <>
                 <PreLoader />
                 <Routes>
-                    <Route path="/" element={<Header toggleForm={this.toggleForm} />} />
-                    <Route path="*" element={<Navbar toggleForm={this.toggleForm} />} />
+                    <Route path="/" element={<Header toggleLoginForm={this.toggleLoginForm} />} />
+                    <Route path="*" element={<Navbar toggleLoginForm={this.toggleLoginForm} />} />
                 </Routes>
 
                 <Routes>
@@ -42,21 +41,8 @@ class App extends React.Component {
 
                     <Route path="*" element={<Error />} />
                 </Routes>
+                <Auth toggleLoginForm={this.toggleLoginForm} isLoginModalOpen={this.state.isLoginModalOpen} />
 
-                <Modal
-                    centered
-                    // fullscreen=""
-                    // scrollable
-                    size=""
-                    isOpen={this.state.isModalOpen}
-                    toggle={this.toggleForm}
-                >
-                    <ModalHeader className="Modal-Header">Sign In to Your Account</ModalHeader>
-                    <ModalBody className="Login-Body">
-                        <Login />
-                    </ModalBody>
-                    {/* <ModalFooter>Didn't have Account?</ModalFooter> */}
-                </Modal>
                 <Footer />
             </>
         );

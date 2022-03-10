@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const NavCards = ({ toggleForm }) => {
+const NavCards = ({ toggleLoginForm }) => {
     return (
         <ul className="nav navbar-nav navbar-right">
             <li className="cart_link">
@@ -24,7 +24,7 @@ const NavCards = ({ toggleForm }) => {
                             <span style={{ margin: "0px 5px" }}>My Account</span>
                             <i class="fa fa-angle-down"></i>
                         </a> */}
-            <button className="section-btn" onClick={toggleForm}>
+            <button className="section-btn" onClick={toggleLoginForm}>
                 <span style={{ margin: "0px 10px 0px 0px" }}>Sign In</span>
                 <i class="fa fa-angle-right"></i>
             </button>
@@ -36,7 +36,7 @@ const NavCards = ({ toggleForm }) => {
     );
 };
 NavCards.propTypes = {
-    toggleForm: PropTypes.func.isRequired,
+    toggleLoginForm: PropTypes.func.isRequired,
 };
 
 export default NavCards;
