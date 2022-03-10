@@ -6,8 +6,6 @@ import CardHeader from "../CardHeader";
 import CardBottom from "../CardBottom";
 import SocialLinks from "../SocialLinks";
 import { useNavigate, Link } from "react-router-dom";
-
-import { Form, FormGroup, Input, Label, Button, Row, Col, FormFeedback } from "reactstrap";
 import { Modal, ModalBody } from "reactstrap";
 
 const initValues = {
@@ -15,7 +13,7 @@ const initValues = {
     pass: "",
 };
 
-const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
+const Login = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSignUpForm }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(initValues);
     const [remember, setRemember] = useState(false);
@@ -77,7 +75,6 @@ const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
     const handleError = () => {
         const error = {};
         const { email, pass } = user;
-
         if (!email) {
             error.email = "Email Cannot be Empty";
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
@@ -91,6 +88,33 @@ const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
         return {
             error,
             isValid: Object.keys(error).length === 0,
+        };
+    };
+
+    const handleEmailError = () => {
+        const error = {};
+        const { email } = user;
+
+        if (!email) {
+            error.email = "Email Cannot be Empty";
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+            error.email = "Email Address is invalid";
+        }
+        return {
+            error,
+        };
+    };
+    const handlePassError = () => {
+        const error = {};
+        const { pass } = user;
+
+        if (!pass) {
+            error.pass = "Password Cannot be Empty";
+        } else if (pass.length < 6) {
+            error.pass = "Password Needs to be 6 Characters or More";
+        }
+        return {
+            error,
         };
     };
 
@@ -111,7 +135,7 @@ const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
                         <Link to="#">Forgot Password?</Link>
                     </div>
                     <SocialLinks />
-                    <CardBottom title="Don't have an account? Sign Up" />
+                    <CardBottom title="Don't have an account? Sign Up" toggleForm={toggleSignUpForm} />
                 </ModalBody>
             </Modal>
         </>
@@ -119,9 +143,9 @@ const Login = ({ isLoginModalOpen, toggleLoginForm }) => {
 };
 Login.propTypes = {
     toggleLoginForm: PropTypes.func.isRequired,
-    // toggleSignUpForm: PropTypes.func.isRequired,
+    toggleSignUpForm: PropTypes.func.isRequired,
     isLoginModalOpen: PropTypes.bool.isRequired,
-    // isSignUpModalOpen: PropTypes.bool.isRequired,
+    isSignUpModalOpen: PropTypes.bool.isRequired,
 };
 
 export default Login;

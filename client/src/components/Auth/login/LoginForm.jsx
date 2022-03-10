@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextInput from "../TextInput";
-import { Form, FormGroup, Input, Label, Button, Row, Col, FormFeedback } from "reactstrap";
+import { Form, FormGroup, Input, Label, Button, Col } from "reactstrap";
 
 const LoginForm = ({ values, error, handleChange, handleSubmit, handleCheckBox, remember }) => (
     <Form onSubmit={handleSubmit}>

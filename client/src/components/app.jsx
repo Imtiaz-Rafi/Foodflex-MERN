@@ -17,11 +17,14 @@ import Auth from "./Auth";
 class App extends React.Component {
     state = {
         isLoginModalOpen: false,
+        isSignUpModalOpen: false,
     };
 
+    toggleSignUpForm = () => {
+        this.setState({ isSignUpModalOpen: !this.state.isSignUpModalOpen, isLoginModalOpen: false });
+    };
     toggleLoginForm = () => {
-        console.log("Clicked");
-        this.setState({ isLoginModalOpen: !this.state.isLoginModalOpen });
+        this.setState({ isLoginModalOpen: !this.state.isLoginModalOpen, isSignUpModalOpen: false });
     };
 
     render() {
@@ -36,12 +39,16 @@ class App extends React.Component {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<Menu />} />
-                    {/* <Route path="/contact" element={<Contact />} /> */}
                     <Route path="/reservation" element={<Reservation />} />
 
                     <Route path="*" element={<Error />} />
                 </Routes>
-                <Auth toggleLoginForm={this.toggleLoginForm} isLoginModalOpen={this.state.isLoginModalOpen} />
+                <Auth
+                    toggleLoginForm={this.toggleLoginForm}
+                    toggleSignUpForm={this.toggleSignUpForm}
+                    isLoginModalOpen={this.state.isLoginModalOpen}
+                    isSignUpModalOpen={this.state.isSignUpModalOpen}
+                />
 
                 <Footer />
             </>

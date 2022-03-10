@@ -1,81 +1,97 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextInput from "../TextInput";
-import CheckBox from "../CheckBox";
+import { Link } from "react-router-dom";
+import { Form, FormGroup, Input, Label, Button, Row, Col } from "reactstrap";
 
 const SignUpForm = ({ values, handleSubmit, handleChange, handleCheckBox, agreement, error }) => (
-    <div className="card-body">
-        <form onSubmit={handleSubmit}>
-            <div className="row">
+    <Form onSubmit={handleSubmit}>
+        <Row xs={2}>
+            <Col>
                 <TextInput
-                    icon="fas fa-user"
-                    type="name"
-                    placeholder="First Name"
                     name="fname"
+                    type="name"
+                    label="First Name"
+                    placeholder="Enter Your Name"
                     value={values.fname}
                     error={error.fname}
                     onChange={handleChange}
                 />
+            </Col>
+            <Col>
                 <TextInput
-                    icon="fas fa-user"
-                    type="name"
-                    placeholder="Last Name"
                     name="sname"
+                    type="name"
+                    label="Last Name"
+                    placeholder="Enter Your Name"
                     value={values.sname}
                     error={error.sname}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="row">
+            </Col>
+            <Col>
                 <TextInput
-                    icon="fas fa-envelope"
-                    type="email"
-                    placeholder="Email Address"
                     name="email"
+                    type="email"
+                    label="Email"
+                    placeholder="yourmail@abc.com"
                     value={values.email}
                     error={error.email}
                     onChange={handleChange}
                 />
+            </Col>
+            <Col>
                 <TextInput
-                    icon="fas fa-phone-alt"
-                    type="phone"
-                    placeholder="Mobile Number"
                     name="mobile"
+                    type="phone"
+                    label="Mobile No."
+                    placeholder="+880**********"
                     value={values.mobile}
                     error={error.mobile}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="row">
+            </Col>
+            <Col>
                 <TextInput
-                    icon="fas fa-lock"
-                    type="password"
-                    placeholder="Password"
                     name="pass"
+                    type="password"
+                    label="Password"
+                    placeholder="Enter Password"
                     value={values.pass}
                     error={error.pass}
                     onChange={handleChange}
                 />
+            </Col>
+            <Col>
                 <TextInput
-                    icon="fas fa-lock"
-                    type="password"
-                    placeholder="Confirm Password"
                     name="conpass"
+                    type="password"
+                    label="Confirm Password"
+                    placeholder="Confirm Password"
                     value={values.conpass}
                     error={error.conpass}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="row">
-                <div className="login-btn d-table d-table-cell">
-                    <CheckBox type="checkbox" name="agree" id="agree" checked={agreement} onChange={handleCheckBox} />
-                    <button type="submit" className="sign-up-button log-in-button d-table-cell" disabled={!agreement}>
-                        Sign Up
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+            </Col>
+        </Row>
+
+        <FormGroup row>
+            <Col sm={{ size: 10 }}>
+                <FormGroup check>
+                    <Input id="checkbox2" type="checkbox" name="agree" checked={agreement} onChange={handleCheckBox} />{" "}
+                    <Label check>
+                        {" I accept the "}
+                        <Link to="#">Terms and conditions</Link>
+                        {" & "}
+                        <Link to="#">Privacy Policy</Link>
+                    </Label>
+                </FormGroup>
+            </Col>
+        </FormGroup>
+        <Button block className="Loginbtn" disabled={!agreement}>
+            Sign Up
+        </Button>
+    </Form>
 );
 
 SignUpForm.propTypes = {

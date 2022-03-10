@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 // import "../../css/login.css";
+import PropTypes from "prop-types";
 import SignUpForm from "./SignUpForm";
 import CardHeader from "../CardHeader";
 import CardBottom from "../CardBottom";
 import { useNavigate } from "react-router-dom";
-
+import { Modal, ModalBody } from "reactstrap";
 const initValues = {
     fname: "",
     sname: "",
@@ -14,7 +15,7 @@ const initValues = {
     conpass: "",
 };
 
-const Signup = () => {
+const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSignUpForm }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(initValues);
     const [agreement, setAgreement] = useState(false);
@@ -117,9 +118,9 @@ const Signup = () => {
 
     return (
         <>
-            <div className="container">
-                <div className="card-content signup-content">
-                    <CardHeader title="Sign Up to Your Account" />
+            <Modal centered size="lg" isOpen={isSignUpModalOpen} toggle={toggleSignUpForm}>
+                <CardHeader title="Sign Up for New Account" />
+                <ModalBody className="SignUpBody">
                     <SignUpForm
                         values={user}
                         agreement={agreement}
@@ -128,11 +129,16 @@ const Signup = () => {
                         handleSubmit={handleSubmit}
                         handleCheckBox={handleCheckBox}
                     />
-                    <CardBottom dir="/login" title="Already have an account? Log In" />
-                </div>
-            </div>
+                    <CardBottom title="Already have an Account? LogIn Now!" toggleForm={toggleLoginForm} />
+                </ModalBody>
+            </Modal>
         </>
     );
 };
-
+Signup.propTypes = {
+    toggleLoginForm: PropTypes.func.isRequired,
+    toggleSignUpForm: PropTypes.func.isRequired,
+    isLoginModalOpen: PropTypes.bool.isRequired,
+    isSignUpModalOpen: PropTypes.bool.isRequired,
+};
 export default Signup;

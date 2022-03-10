@@ -28,14 +28,23 @@ body {
 .Login-Body {
     padding: 20px;
 }
-.Login-Body .Loginbtn {
+.SignUpBody {
+    padding: 30px;
+}
+.SignUpBody .Loginbtn {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.18);
+    margin-bottom: 20px;
+}
+.Login-Body .Loginbtn,
+.SignUpBody .Loginbtn {
     /* font-size: 13px; */
     color: #fff;
     background-color: #ce3232;
     padding: 12px 25px;
     transition: all 0.3s;
 }
-.Login-Body .Loginbtn:hover {
+.Login-Body .Loginbtn:hover,
+.SignUpBody .Loginbtn:hover {
     background-color: #ad1f1f;
 }
 .forgot-pass {
@@ -50,16 +59,20 @@ body {
 .api-Links {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.18);
+    /* border-bottom: 1px solid rgb(0, 0, 0, 0.18); */
 }
 .bottom-LoginForm {
+    border-top: 1px solid rgb(0, 0, 0, 0.2);
     padding-top: 15px;
     text-align: center;
 }
 .bottom-LoginForm .btn {
-    background: rgb(0, 0, 0, 0.3);
+    /* background: rgb(0, 0, 0, 0.3); */
     padding: 6px 30px;
     text-align: center;
+}
+.bottom-LoginForm .btn:hover {
+    color: #ffffff;
 }
 /*---------------------------------------
      TYPOGRAPHY              
