@@ -13,6 +13,7 @@ import Menu from "./Menu";
 import Reservation from "./Reservation";
 import Auth from "./Auth";
 // import ModalTest from "./ModalTest";
+import CaroselTest from "./CarosalTest";
 
 class App extends React.Component {
     state = {
@@ -40,6 +41,7 @@ class App extends React.Component {
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<Menu />} />
                     <Route path="/reservation" element={<Reservation />} />
+                    <Route path="/carousel" element={<CaroselTest />} />
 
                     <Route path="*" element={<Error />} />
                 </Routes>

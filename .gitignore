@@ -1,0 +1,9 @@
+# IGNORE FROM CLIENT SIDE
+client/node_modules/
+client/public/assets
+client/package-lock.json
+
+# IGNORE FROM SERVER SIDE
+server/node_modules/
+server/package-lock.json
+server/.env
