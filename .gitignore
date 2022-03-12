@@ -4,6 +4,7 @@ client/public/assets
 client/package-lock.json
 
 # IGNORE FROM SERVER SIDE
-server/node_modules/
-server/package-lock.json
-server/.env
+node_modules/
+package-lock.json
+*.log
+.env
