@@ -51,21 +51,32 @@ const Login = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSig
             });
             const data = result.json();
             if (result.status === 404) {
-                window.alert("Invalid Email or Password");
-                console.log("Invalid Email or Password");
+                const error = {};
+                // const { email, pass } = user;
+                error.email = "Invalid Email or Password";
+                error.pass = "Invalid Email or Password";
+                setError(error);
+                // window.alert("Invalid Email or Password");
+                // console.log("Invalid Email or Password");
             } else if (result.status === 400) {
                 window.alert("Something Failed at 400");
                 console.log("Something Failed at 400");
             } else if (!data) {
-                window.alert("Something Failed");
-                console.log("Something Failed");
+                const error = {};
+                const { email, pass } = user;
+                error.email = data;
+                setError(error);
+                // console.log(data);
+                // window.alert("Something Failed");
+                // console.log("Something Failed");
             } else {
-                window.alert("Login Successfull");
-                console.log("Login Successfull");
+                // window.alert("Login Successfull");
+                // console.log("Login Successfull");
 
                 event.target.reset();
                 setUser(initValues);
-                navigate("/");
+                // navigate("/");
+                toggleLoginForm();
             }
         } else {
             setError(error);

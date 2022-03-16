@@ -67,7 +67,7 @@ const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSi
                 event.target.reset();
                 setUser(initValues);
                 setAgreement(false);
-                navigate("/login");
+                // navigate("/login");
             }
         } else {
             setError(error);
