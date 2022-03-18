@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 // ~~~~~~~INC~~~~~~~~~
 import Navbar from "./Inc/Navbar/Navbar";
@@ -12,53 +12,73 @@ import Menu from "./Menu";
 // import Contact from "./Contact";
 import Reservation from "./Reservation";
 import Auth from "./Auth";
-// import ModalTest from "./ModalTest";
-import CaroselTest from "./CarosalTest";
 
-class App extends React.Component {
-    state = {
-        isLoginModalOpen: false,
-        isSignUpModalOpen: false,
-    };
-
-    toggleSignUpForm = () => {
-        {
-            // console.log(decoded);
+const App = () => {
+    const [LoggedIn, setLoggedIn] = useState(false);
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+    const isLoggedIn = async () => {
+        try {
+            const res = await fetch("/isLogged", {
+                method: "GET",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+            });
+            const data = await res.json();
+            console.log("User Data", data);
+            if (res.status === 200) {
+                setLoggedIn(true);
+            } else {
+                const error = new Error(res.error);
+                throw error;
+            }
+        } catch (err) {
+            console.log("Error from navcard", err);
+            setLoggedIn(false);
         }
-        this.setState({ isSignUpModalOpen: !this.state.isSignUpModalOpen, isLoginModalOpen: false });
     };
-    toggleLoginForm = () => {
-        this.setState({ isLoginModalOpen: !this.state.isLoginModalOpen, isSignUpModalOpen: false });
+    const toggleSignUpForm = () => {
+        setIsSignUpModalOpen(!isSignUpModalOpen);
+        setIsLoginModalOpen(false);
+    };
+    const toggleLoginForm = () => {
+        setIsLoginModalOpen(!isLoginModalOpen);
+        setIsSignUpModalOpen(false);
     };
 
-    render() {
-        return (
-            <>
-                <PreLoader />
-                <Routes>
-                    <Route path="/" element={<Header toggleLoginForm={this.toggleLoginForm} />} />
-                    <Route path="*" element={<Navbar toggleLoginForm={this.toggleLoginForm} />} />
-                </Routes>
+    useEffect(() => {
+        isLoggedIn();
+    }, []);
 
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/menu" element={<Menu />} />
-                    <Route path="/reservation" element={<Reservation />} />
-                    <Route path="/carousel" element={<CaroselTest />} />
+    return (
+        <>
+            <PreLoader />
+            <Routes>
+                <Route path="/" element={<Header toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} />} />
+                <Route path="*" element={<Navbar toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} />} />
+            </Routes>
 
-                    <Route path="*" element={<Error />} />
-                </Routes>
-                <Auth
-                    toggleLoginForm={this.toggleLoginForm}
-                    toggleSignUpForm={this.toggleSignUpForm}
-                    isLoginModalOpen={this.state.isLoginModalOpen}
-                    isSignUpModalOpen={this.state.isSignUpModalOpen}
-                />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/reservation" element={<Reservation />} />
 
-                <Footer />
-            </>
-        );
-    }
-}
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Auth
+                isLoggedIn={isLoggedIn}
+                toggleLoginForm={toggleLoginForm}
+                toggleSignUpForm={toggleSignUpForm}
+                isLoginModalOpen={isLoginModalOpen}
+                isSignUpModalOpen={isSignUpModalOpen}
+            />
+
+            <Footer />
+        </>
+    );
+};
 
 export default App;

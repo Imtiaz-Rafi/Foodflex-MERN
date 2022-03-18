@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import Login from "./login";
 import Signup from "./register";
 
-const Auth = ({ toggleLoginForm, toggleSignUpForm, isLoginModalOpen, isSignUpModalOpen }) => {
+const Auth = ({ toggleLoginForm, toggleSignUpForm, isLoginModalOpen, isSignUpModalOpen, isLoggedIn }) => {
     return (
         (isLoginModalOpen && (
             <Login
+                isLoggedIn={isLoggedIn}
                 toggleLoginForm={toggleLoginForm}
                 isLoginModalOpen={isLoginModalOpen}
                 toggleSignUpForm={toggleSignUpForm}
@@ -15,6 +16,7 @@ const Auth = ({ toggleLoginForm, toggleSignUpForm, isLoginModalOpen, isSignUpMod
         )) ||
         (isSignUpModalOpen && (
             <Signup
+                isLoggedIn={isLoggedIn}
                 toggleLoginForm={toggleLoginForm}
                 isLoginModalOpen={isLoginModalOpen}
                 toggleSignUpForm={toggleSignUpForm}

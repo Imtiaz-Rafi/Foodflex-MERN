@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import SignUpForm from "./SignUpForm";
 import CardHeader from "../CardHeader";
 import CardBottom from "../CardBottom";
-import { useNavigate } from "react-router-dom";
 import { Modal, ModalBody } from "reactstrap";
 const initValues = {
     fname: "",
@@ -15,8 +14,7 @@ const initValues = {
     conpass: "",
 };
 
-const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSignUpForm }) => {
-    const navigate = useNavigate();
+const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSignUpForm, isLoggedIn }) => {
     const [user, setUser] = useState(initValues);
     const [agreement, setAgreement] = useState(false);
     const [error, setError] = useState({});
@@ -63,7 +61,7 @@ const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSi
             } else {
                 window.alert("Registration Successfull");
                 console.log("Registration Successfull");
-
+                isLoggedIn();
                 event.target.reset();
                 setUser(initValues);
                 setAgreement(false);
@@ -136,6 +134,7 @@ const Signup = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSi
     );
 };
 Signup.propTypes = {
+    isLoggedIn: PropTypes.func.isRequired,
     toggleLoginForm: PropTypes.func.isRequired,
     toggleSignUpForm: PropTypes.func.isRequired,
     isLoginModalOpen: PropTypes.bool.isRequired,

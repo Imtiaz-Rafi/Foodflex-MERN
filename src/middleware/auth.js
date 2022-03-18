@@ -9,12 +9,9 @@ module.exports = async (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, config.get("jwtPrivateKey"));
-        console.log(decoded);
-        console.log(decoded._id);
         const user = await User.findOne({ _id: decoded._id });
         if (!user) throw new Error("User Not Found");
         req.user = user;
-        console.log("this is from authorization:", req.user);
         next();
     } catch (err) {
         res.status(400).json({ error: "Invalid Token" });

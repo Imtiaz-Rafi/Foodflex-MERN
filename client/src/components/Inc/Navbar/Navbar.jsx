@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "./controllers/Logo";
-import NavLinks from "./controllers/NavLinks";
 import NavCards from "./controllers/NavCards";
-// import TodoForm from "./todoForm";
 
 import PropTypes from "prop-types";
 
-const Navbar = ({ toggleLoginForm }) => {
+const Navbar = ({ toggleLoginForm, LoggedIn }) => {
     return (
         <section className="navbar custom-navbar navbar-fixed-top top-nav-collapse">
             <div className="container">
                 <Logo />
-                {/* MENU LINKS */}
                 <div className="collapse navbar-collapse">
-                    <NavCards toggleLoginForm={toggleLoginForm} />
+                    <NavCards toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} />
                 </div>
             </div>
         </section>
@@ -22,6 +19,7 @@ const Navbar = ({ toggleLoginForm }) => {
 
 Navbar.propTypes = {
     toggleLoginForm: PropTypes.func.isRequired,
+    LoggedIn: PropTypes.bool.isRequired,
 };
 
 export default Navbar;
