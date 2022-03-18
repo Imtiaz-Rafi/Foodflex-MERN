@@ -22,6 +22,9 @@ class App extends React.Component {
     };
 
     toggleSignUpForm = () => {
+        {
+            // console.log(decoded);
+        }
         this.setState({ isSignUpModalOpen: !this.state.isSignUpModalOpen, isLoginModalOpen: false });
     };
     toggleLoginForm = () => {

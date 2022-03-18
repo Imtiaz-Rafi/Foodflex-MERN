@@ -32,14 +32,14 @@ const userSchema = new mongoose.Schema({
     },
     isAdmin: Boolean,
     user_terms: Boolean,
-    // tokens: [
-    //     {
-    //         token: {
-    //             type: String,
-    //             required: true,
-    //         },
-    //     },
-    // ],
+    tokens: [
+        {
+            token: {
+                type: String,
+                required: true,
+            },
+        },
+    ],
 });
 
 userSchema.methods.generateAuthToken = function () {
