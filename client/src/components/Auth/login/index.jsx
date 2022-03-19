@@ -23,6 +23,9 @@ const Login = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSig
             ...user,
             [event.target.name]: event.target.value,
         });
+        setError({
+            [event.target.name]: "",
+        });
     };
     const handleCheckBox = (event) => {
         setRemember(event.target.checked);
@@ -48,7 +51,7 @@ const Login = ({ isLoginModalOpen, toggleLoginForm, isSignUpModalOpen, toggleSig
             if (result.status === 404 || !data) {
                 const error = {};
                 // const { email, pass } = user;
-                error.email = "Invalid Email or Password";
+                error.email = ".";
                 error.pass = "Invalid Email or Password";
                 setError(error);
             } else if (result.status === 400) {
