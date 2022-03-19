@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AccountDropDown from "./AccountDropDown";
 
-const NavCards = ({ toggleLoginForm, LoggedIn }) => {
+const NavCards = ({ toggleLoginForm, LoggedIn, isLoggedIn }) => {
     return (
         <ul className="nav navbar-nav navbar-right">
             <li className="cart_link">
@@ -17,12 +17,8 @@ const NavCards = ({ toggleLoginForm, LoggedIn }) => {
                 </Link>
             </li>
             {LoggedIn ? (
-                <AccountDropDown />
+                <AccountDropDown isLoggedIn={isLoggedIn} />
             ) : (
-                // <button className="section-btn" onClick={toggleLoginForm}>
-                //     <span style={{ margin: "0px 10px 0px 0px" }}>My Account</span>
-                //     <i class="fa fa-angle-right"></i>
-                // </button>
                 <button className="section-btn" onClick={toggleLoginForm}>
                     <span style={{ margin: "0px 10px 0px 0px" }}>Sign In</span>
                     <i class="fa fa-angle-right"></i>
@@ -33,6 +29,7 @@ const NavCards = ({ toggleLoginForm, LoggedIn }) => {
 };
 NavCards.propTypes = {
     toggleLoginForm: PropTypes.func.isRequired,
+    isLoggedIn: PropTypes.func.isRequired,
     LoggedIn: PropTypes.bool.isRequired,
 };
 

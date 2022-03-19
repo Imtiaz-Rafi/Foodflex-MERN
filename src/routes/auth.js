@@ -2,6 +2,7 @@ const { User, validateAuth } = require("../models/user");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
+// const auth = require("../middleware/auth");
 
 router.get("/", (req, res) => {
     res.send("This is from Auth");

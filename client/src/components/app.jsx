@@ -57,8 +57,14 @@ const App = () => {
         <>
             <PreLoader />
             <Routes>
-                <Route path="/" element={<Header toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} />} />
-                <Route path="*" element={<Navbar toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} />} />
+                <Route
+                    path="/"
+                    element={<Header toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} isLoggedIn={isLoggedIn} />}
+                />
+                <Route
+                    path="*"
+                    element={<Navbar toggleLoginForm={toggleLoginForm} LoggedIn={LoggedIn} isLoggedIn={isLoggedIn} />}
+                />
             </Routes>
 
             <Routes>
