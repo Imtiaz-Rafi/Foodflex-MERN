@@ -12,7 +12,7 @@ module.exports = function (app) {
     app.use(express.urlencoded({ extended: true }));
     app.use("/registration", users);
     app.use("/login", auth);
-    app.use("/isLogged", isLogged);
+    app.use("/islogged", isLogged);
     app.use("/logout", logout);
     // app.use("/menu", items);
     // app.use("/category", categories);

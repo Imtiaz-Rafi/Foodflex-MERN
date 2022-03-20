@@ -19,7 +19,7 @@ const App = () => {
     const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
     const isLoggedIn = async () => {
         try {
-            const res = await fetch("/isLogged", {
+            const res = await fetch("/islogged", {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -32,8 +32,7 @@ const App = () => {
             if (res.status === 200) {
                 setLoggedIn(true);
             } else {
-                const error = new Error(res.error);
-                throw error;
+                // return res.status(404).json({ message: "No Data Provided" });
             }
         } catch (err) {
             console.log("Error from navcard", err);

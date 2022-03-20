@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
         person.pass = await bcrypt.hash(person.pass, salt);
         const token = await person.generateAuthToken();
         // res.header("x-token", token).status(200).json({ message: "User Registerd Successfully" });
-        // res.status(200).json("Success");
+        res.status(200).json("Success");
         await person.save();
     } catch (err) {
         for (feild in err.errors) {
