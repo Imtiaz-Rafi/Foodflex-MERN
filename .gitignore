@@ -1,6 +1,6 @@
 # IGNORE FROM CLIENT SIDE
 client/node_modules/
-client/public/assets
+# client/public/assets
 client/package-lock.json
 
 # IGNORE FROM SERVER SIDE
