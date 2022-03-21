@@ -1,10 +1,10 @@
 # IGNORE FROM CLIENT SIDE
 client/node_modules/
 # client/public/assets
-client/package-lock.json
+# client/package-lock.json
 
 # IGNORE FROM SERVER SIDE
 node_modules/
-package-lock.json
+# package-lock.json
 *.log
 .env
