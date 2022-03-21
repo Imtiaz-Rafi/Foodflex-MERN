@@ -5,6 +5,6 @@ client/node_modules/
 
 # IGNORE FROM SERVER SIDE
 node_modules/
-# package-lock.json
+package-lock.json
 *.log
 .env
