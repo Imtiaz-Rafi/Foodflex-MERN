@@ -1,22 +1,15 @@
 require("dotenv").config();
-// const dotenv = require("dotenv");
 const express = require("express");
-// const winston = require("winston");
 const path = require("path");
 
 const app = express();
 
 const port = process.env.PORT || 5000;
 
-// require("./start/logger")();
+require("./start/logger")();
 require("./db/db")();
 require("./routes/routes")(app);
 require("./start/config")();
-// dotenv.config({ path: "./.env" });
-
-// app.get("/", (req, res) => {
-//     res.send("This is From server.");
-// });
 
 if (process.env.NODE_ENV == "production") {
     app.use(express.static(path.join(__dirname, "./client/build")));
