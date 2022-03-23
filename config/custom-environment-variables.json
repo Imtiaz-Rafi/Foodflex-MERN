@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "foodflex-mern_jwtPrivateKey",
+    "jwtPrivateKey": "foodflex_jwtPrivateKey",
     "DB": "DBLINK"
 }

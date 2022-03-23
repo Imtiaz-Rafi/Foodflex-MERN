@@ -7,10 +7,10 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-require("./start/logger")();
+// require("./start/logger")();
 require("./db/db")();
 require("./routes/routes")(app);
-require("./start/config")();
+// require("./start/config")();
 
 // app.get("/", (req, res) => {
 //     res.send("This is From server.");

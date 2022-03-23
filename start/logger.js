@@ -10,7 +10,7 @@ module.exports = function () {
         throw ex;
     });
     winston.add(new winston.transports.File({ filename: "logs/logfile.log" }));
-    if (process.env.NODE_ENV !== "production") {
-        winston.add(new winston.transports.Console({ Colorize: true, prettyPrint: true }));
-    }
+    // if (process.env.NODE_ENV !== "production") {
+    //     winston.add(new winston.transports.Console({ Colorize: true, prettyPrint: true }));
+    // }
 };
