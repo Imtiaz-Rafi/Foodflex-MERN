@@ -1,4 +1,5 @@
 require("dotenv").config();
+// const dotenv = require("dotenv");
 const express = require("express");
 // const winston = require("winston");
 const path = require("path");
@@ -10,7 +11,8 @@ const port = process.env.PORT || 5000;
 // require("./start/logger")();
 require("./db/db")();
 require("./routes/routes")(app);
-// require("./start/config")();
+require("./start/config")();
+// dotenv.config({ path: "./.env" });
 
 // app.get("/", (req, res) => {
 //     res.send("This is From server.");

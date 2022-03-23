@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "foodflex_jwtPrivateKey",
-    "DB": "DBLINK"
+    "DB": "DBLINK",
+    "jwtPrivateKey": "foodflex_jwtPrivateKey"
 }
