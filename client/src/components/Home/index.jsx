@@ -4,6 +4,7 @@ import Slider from "./sections/Slider";
 import Offers from "./sections/Offers";
 import About from "./sections/About";
 import MenuView from "./sections/MenuView";
+import Menu from "../Menu";
 // import Contact from "../Contact";
 import Reservation from "../Reservation";
 // import Team from "./team";
@@ -16,7 +17,8 @@ const Home = () => {
             <Slider />
             <Offers />
             <About />
-            <MenuView />
+            {/* <MenuView /> */}
+            <Menu />
             {/* <Contact /> */}
             <Reservation />
         </>

@@ -1,21 +1,21 @@
 import React from "react";
-import PreLoader from "../Inc/PreLoader";
-import BreadCrumb from "./controllers/Breadcrumb";
+// import PreLoader from "../Inc/PreLoader";
+// import BreadCrumb from "./controllers/Breadcrumb";
 
 const Menu = () => {
     return (
         <>
             {/* <PreLoader /> */}
-            <section data-stellar-background-ratio="0.5">
+            {/* <section data-stellar-background-ratio="0.5">
                 <BreadCrumb />
-            </section>
-            <section className="section" id="offers">
+            </section> */}
+            <section id="offers" data-stellar-background-ratio="0.5">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div className="section-heading">
-                                <h6>Klassy Week</h6>
-                                <h2>This Week’s Special Meal Offers</h2>
+                            <div className="section-heading wow fadeInUp" data-wow-delay="0.1s">
+                                {/* <h6>Klassy Week</h6> */}
+                                <h2>Our Menu's</h2>
                             </div>
                         </div>
                         {/* </div>
