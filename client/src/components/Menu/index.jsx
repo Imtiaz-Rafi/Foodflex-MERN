@@ -1,339 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import PreLoader from "../Inc/PreLoader";
 // import BreadCrumb from "./controllers/Breadcrumb";
+import SectionHeading from "./controllers/SectionHeading";
+import HeadingTabs from "./controllers/HeadingTabs";
+import DinnerView from "./views/DinnerView";
+import SnacksView from "./views/SnacksView";
+import LunchView from "./views/LunchView";
 
 const Menu = () => {
+    const [items, setItems] = useState([]);
+
+    const fetchItems = async () => {
+        let res = await fetch("/menu");
+        res = await res.json();
+        console.log("fetch data: ", res);
+        setItems(res);
+    };
+
+    useEffect(() => {
+        try {
+            fetchItems();
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
+
     return (
         <>
-            {/* <PreLoader /> */}
-            {/* <section data-stellar-background-ratio="0.5">
-                <BreadCrumb />
-            </section> */}
-            <section id="offers" data-stellar-background-ratio="0.5">
+            <section id="menu" data-stellar-background-ratio="0.5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12 text-center">
-                            <div className="section-heading wow fadeInUp" data-wow-delay="0.1s">
-                                {/* <h6>Klassy Week</h6> */}
-                                <h2>Our Menu's</h2>
-                            </div>
-                        </div>
-                        {/* </div>
-                <div className="row"> */}
+                        <SectionHeading />
                         <div className="col-md-12 col-sm-12">
                             <div className="row" id="tabs">
-                                <div className="col-md-12">
-                                    <div className="heading-tabs">
-                                        <div className="row">
-                                            <div className="col-md-12">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#tabs-1">
-                                                            <img src="assets/images/tab-icon-01.png" alt="" />
-                                                            Breakfast
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tabs-2">
-                                                            <img src="assets/images/tab-icon-02.png" alt="" />
-                                                            Lunch
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tabs-3">
-                                                            <img src="assets/images/tab-icon-03.png" alt="" />
-                                                            Dinner
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <HeadingTabs />
                                 <div className="col-md-12">
                                     <section className="tabs-content">
-                                        <article id="tabs-1">
-                                            <div className="row">
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="left-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-01.png" alt="" />
-                                                                    <h4>Fresh Chicken Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$10.50</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-02.png" alt="" />
-                                                                    <h4>Orange Juice</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$8.50</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-03.png" alt="" />
-                                                                    <h4>Fruit Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$9.90</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="right-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-04.png" alt="" />
-                                                                    <h4>Eggs Omelette</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$6.50</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-05.png" alt="" />
-                                                                    <h4>Dollma Pire</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$5.00</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-06.png" alt="" />
-                                                                    <h4>Omelette &amp; Cheese</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$4.10</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                        <article id="tabs-2">
-                                            <div className="row">
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="left-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-04.png" alt="" />
-                                                                    <h4>Eggs Omelette</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$14</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-05.png" alt="" />
-                                                                    <h4>Dollma Pire</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$18</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-06.png" alt="" />
-                                                                    <h4>Omelette &amp; Cheese</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$22</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="right-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-01.png" alt="" />
-                                                                    <h4>Fresh Chicken Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$10</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-02.png" alt="" />
-                                                                    <h4>Orange Juice</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$20</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-03.png" alt="" />
-                                                                    <h4>Fruit Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$30</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                        <article id="tabs-3">
-                                            <div className="row">
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="left-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-05.png" alt="" />
-                                                                    <h4>Eggs Omelette</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$14</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-03.png" alt="" />
-                                                                    <h4>Orange Juice</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$18</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-02.png" alt="" />
-                                                                    <h4>Fruit Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$10</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="row">
-                                                        <div className="right-list">
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-06.png" alt="" />
-                                                                    <h4>Fresh Chicken Salad</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$8.50</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-01.png" alt="" />
-                                                                    <h4>Dollma Pire</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$9</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-12">
-                                                                <div className="tab-item">
-                                                                    <img src="assets/images/tab-item-04.png" alt="" />
-                                                                    <h4>Omelette &amp; Cheese</h4>
-                                                                    <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur koit
-                                                                        adipiscing elit, sed do.
-                                                                    </p>
-                                                                    <div className="price">
-                                                                        <h6>$11</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
+                                        <LunchView items={items} />
+                                        {/* <SnacksView /> */}
+                                        {/* <DinnerView /> */}
                                     </section>
                                 </div>
                             </div>

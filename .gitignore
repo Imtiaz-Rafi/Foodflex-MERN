@@ -4,6 +4,7 @@ client/node_modules/
 # client/package-lock.json
 
 # IGNORE FROM SERVER SIDE
+admin/
 node_modules/
 package-lock.json
 *.log

@@ -4,13 +4,15 @@ const auth = require("../middleware/auth");
 const admin = require("../middleware/admin");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-    const items = Menu.findOne({});
-    try {
-        res.send(items);
-    } catch (err) {
-        res.status(500).send(err);
-    }
+// CANNOT USE ASYNC FOR FETCHING DATA.. RAISING INTERNAL SERVER ERROR
+router.get("/", (req, res) => {
+    Menu.find({})
+        .then((item) => {
+            res.status(200).json(item);
+        })
+        .catch((err) => {
+            res.status(500).json({ error: "Internal Server Error" });
+        });
 });
 
 router.post("/", [auth, admin], async (req, res) => {

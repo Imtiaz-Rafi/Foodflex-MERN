@@ -17,7 +17,7 @@ const menuSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    foodImage: {
+    image: {
         type: String,
         required: true,
     },
@@ -36,7 +36,7 @@ function validateMenu(menuSchema) {
         name: Joi.string().min(2).max(55).required(),
         description: Joi.string().min(2).max(255).required(),
         price: Joi.Number().required(),
-        foodImage: Joi.string().required(),
+        image: Joi.string().required(),
         category: Joi.string().min(2).max(55).required(),
     });
     return schema.validate(menuSchema);

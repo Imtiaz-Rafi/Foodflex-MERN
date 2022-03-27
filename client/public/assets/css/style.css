@@ -207,7 +207,6 @@ section {
 
 #team,
 #menu,
-#offer,
 #offers,
 #testimonial {
     text-align: center;
@@ -293,25 +292,25 @@ section {
 /*---------------------------------------
      OFFER              
   -----------------------------------------*/
-#offer .col-md-4 {
+#offers .col-md-4 {
     margin: 0;
     padding: 0;
 }
-#offer .offer-thumb {
+#offers .offers-thumb {
     overflow: hidden;
     position: relative;
     cursor: pointer;
     width: 102%;
 }
-.offer-thumb img {
+.offers-thumb img {
     width: 100%;
     transition: 0.5s;
 }
-.offer-thumb:hover img {
+.offers-thumb:hover img {
     transform: scale(1.15);
 }
 
-.offer-thumb .offer-info {
+.offers-thumb .offers-info {
     position: absolute;
     top: 60%;
     left: 0px;
@@ -322,25 +321,25 @@ section {
     transition: 0.5s 0.2s;
 }
 
-.offer-info .offer-item {
+.offers-info .offers-item {
     float: left;
 }
 
-.offer-info .offer-price {
+.offers-info .offers-price {
     float: right;
 }
-.offer-info .offer-cart-plus {
+.offers-info .offers-cart-plus {
     float: right;
 }
 
-.offer-info .offer-price span {
+.offers-info .offers-price span {
     font-size: 20px;
     font-weight: bold;
     line-height: normal;
     display: block;
     margin-top: 10px;
 }
-.offer-info .offer-cart-plus a {
+.offers-info .offers-cart-plus a {
     text-align: center;
     background: #333333;
     border-radius: 100%;
@@ -351,16 +350,16 @@ section {
     font-size: 20px;
     margin: 15px 5px 0 5px;
 }
-.offer-cart-plus a:hover {
+.offers-cart-plus a:hover {
     transition: 0.2s ease-in-out !important;
     background: #ce3232;
     color: #ffffff;
 }
 
-.offer-thumb .offer-info h3,
-.offer-thumb .offer-info p,
-.offer-thumb .offer-info span,
-.offer-thumb .offer-info a {
+.offers-thumb .offers-info h3,
+.offers-thumb .offers-info p,
+.offers-thumb .offers-info span,
+.offers-thumb .offers-info a {
     transform: translateY(100%);
     opacity: 0;
     display: block;
@@ -370,31 +369,31 @@ section {
     position: relative;
 }
 
-.offer-thumb .offer-info h3 {
+.offers-thumb .offers-info h3 {
     margin-top: 0;
 }
 
-.offer-thumb .offer-info p {
+.offers-thumb .offers-info p {
     color: #d9d9d9;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
 }
-.offer-info .d-inline-grid {
+.offers-info .d-inline-grid {
     display: inline-grid;
     float: right;
 }
 
-.offer-thumb:hover .offer-info h3,
-.offer-thumb:hover .offer-info p,
-.offer-thumb:hover .offer-info span,
-.offer-thumb:hover .offer-info a {
+.offers-thumb:hover .offers-info h3,
+.offers-thumb:hover .offers-info p,
+.offers-thumb:hover .offers-info span,
+.offers-thumb:hover .offers-info a {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.offer-thumb:hover .offer-info {
+.offers-thumb:hover .offers-info {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -732,7 +731,7 @@ section {
      MENU              
   -----------------------------------------*/
 
-#menu {
+/* #menu {
     padding-bottom: 0;
 }
 
@@ -833,7 +832,7 @@ section {
 .section-menu-button {
     margin-top: 40px;
     margin-bottom: 20px;
-}
+} */
 
 /*
 ---------------------------------------------
@@ -841,44 +840,44 @@ section {
 ---------------------------------------------
 */
 
-#offers {
+#menu {
     /* padding-top: 120px; */
 }
 
-#offers .section-heading {
+#menu .section-heading {
     margin-bottom: 15px;
 }
 
-#offers .section-heading h6 {
+#menu .section-heading h6 {
     padding-left: 0px;
 }
 
-#offers .section-heading h6:before {
+#menu .section-heading h6:before {
     display: none;
 }
 
-#offers .heading-tabs {
+#menu .heading-tabs {
     text-align: center;
 }
 
-#offers .heading-tabs .main-dark-button {
+#menu .heading-tabs .main-dark-button {
     text-align: right;
 }
 
-#offers #tabs ul {
+#menu #tabs ul {
     padding: 0;
 }
-#offers #tabs ul li {
+#menu #tabs ul li {
     display: inline-block;
     margin: 0px 15px;
 }
-#offers #tabs ul li:last-child {
+#menu #tabs ul li:last-child {
     margin-right: 0px;
 }
-#offers #tabs ul li:first-child {
+#menu #tabs ul li:first-child {
     margin-left: 0px;
 }
-#offers #tabs ul li a {
+#menu #tabs ul li a {
     text-transform: capitalize;
     width: 100%;
     display: inline-block;
@@ -889,35 +888,35 @@ section {
     text-align: center;
 }
 
-#offers #tabs ul li a img {
+#menu #tabs ul li a img {
     display: block;
     margin: 0 auto 15px auto;
 }
-#offers #tabs ul .ui-tabs-active a {
+#menu #tabs ul .ui-tabs-active a {
     color: #fb5849;
     position: relative;
 }
-#offers #tabs ul .ui-tabs-active span {
+#menu #tabs ul .ui-tabs-active span {
     color: #1e1e1e;
 }
-#offers .tabs-content {
+#menu .tabs-content {
     /* margin-top: 60px; */
     text-align: left;
     display: inline-block;
     transition: all 0.3s;
 }
-#offers .tabs-content .tab-item {
+#menu .tabs-content .tab-item {
     position: relative;
     margin-bottom: 60px;
 }
-#offers .tabs-content img {
+#menu .tabs-content img {
     float: left;
     width: 100px;
     max-width: 100px;
     margin-right: 20px;
     border-radius: 5px;
 }
-#offers .tabs-content h4 {
+#menu .tabs-content h4 {
     padding-top: 10px;
     font-size: 20px;
     font-weight: 700;
@@ -926,19 +925,19 @@ section {
     margin-right: 100px;
 }
 
-#offers .tabs-content p {
+#menu .tabs-content p {
     margin-right: 100px;
 }
 
-#offers .tabs-content .left-list {
+#menu .tabs-content .left-list {
     margin-right: 15px;
 }
 
-#offers .tabs-content .right-list {
+#menu .tabs-content .right-list {
     margin-left: 15px;
 }
 
-#offers .tabs-content .price h6 {
+#menu .tabs-content .price h6 {
     position: absolute;
     top: 15px;
     right: 0;

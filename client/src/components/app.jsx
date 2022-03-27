@@ -12,6 +12,7 @@ import Menu from "./Menu";
 // import Contact from "./Contact";
 import Reservation from "./Reservation";
 import Auth from "./Auth";
+// import Admin from "./Admin";
 
 const App = () => {
     const [LoggedIn, setLoggedIn] = useState(false);
@@ -70,7 +71,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/reservation" element={<Reservation />} />
-
+                {/* <Route path="/admin" element={<Admin />} /> */}
                 <Route path="*" element={<Error />} />
             </Routes>
             <Auth
